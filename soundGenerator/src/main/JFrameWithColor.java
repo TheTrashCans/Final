@@ -12,9 +12,11 @@ public class JFrameWithColor extends JFrame
 		setSize(SIZE, SIZE);
 		con.setLayout(new FlowLayout());
 		con.add(button);
-		con.setBackground(Color.black);
+		con.setBackground(Color.red);
 		button.setBackground(Color.black);
 		button.setForeground(Color.WHITE);
+		
+		
 }	
 
 	public static void main(String[] args) 
