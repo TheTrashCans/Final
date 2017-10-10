@@ -7,33 +7,50 @@ import javax.swing.JOptionPane;
 public class SoundboardButtons extends JFrame 
 {
 	private JButton b1 = new JButton("NOOOOO!");
+	
 	private JButton b2 = new JButton("FALCON PUNCH");
-	{
-		 b2.addActionListener(e->{
-		        butt();
-		    });
-	}
+	
 		
 	private JButton b3 = new JButton("BRUH");
+	
 	private JButton b4 = new JButton("Saxual Saxsation");
+	
 	private JButton b5 = new JButton("Lemme Smash");
+	
 	private JButton b6 = new JButton("OH YES DADDY<3");
+	
 	private JButton b7 = new JButton("Cancer");
+	
 	private JButton b8 = new JButton("Suprise MotherF*cker");
+	
 	private JButton b9 = new JButton("TACTICAL NUKE");
+	
 	private JButton b10 = new JButton("MR.MEESEEKS LOOK AT ME");
+	
 	private JButton b11 = new JButton("NOOOOO!");
+	
 	private JButton b12 = new JButton("NOOOOO!");
+	
 	private JButton b13 = new JButton("NOOOOO!");
+	
 	private JButton b14 = new JButton("NOOOOO!");
+	
 	private JButton b15 = new JButton("NOOOOO!");
+	
 	private JButton b16 = new JButton("NOOOOO!");
+	
 	private JButton b17 = new JButton("NOOOOO!");
+	
 	private JButton b18 = new JButton("NOOOOO!");
+	
 	private JButton b19 = new JButton("NOOOOO!");
+	
 	private JButton b20 = new JButton("NOOOOO!");
+	
 	private JButton b21 = new JButton("NOOOOO!");
+
 	private JButton b22= new JButton("NOOOOO!");
+	
 	private JButton b23= new JButton("NOOOOO!");
 	private JButton b24= new JButton("NOOOOO!");
 	private JButton b25= new JButton("NOOOOO!");
