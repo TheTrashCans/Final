@@ -1,12 +1,21 @@
 package main;
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.*;
-public class SoundboardButtons extends JFrame
+import javax.swing.JOptionPane;
+public class SoundboardButtons extends JFrame 
 {
 	private JButton b1 = new JButton("NOOOOO!");
 	private JButton b2 = new JButton("FALCON PUNCH");
+	{
+		 b2.addActionListener(e->{
+		        butt();
+		    });
+	}
+		
 	private JButton b3 = new JButton("BRUH");
-	private JButton b4 = new JButton("Sexual Saxsation");
+	private JButton b4 = new JButton("Saxual Saxsation");
 	private JButton b5 = new JButton("Lemme Smash");
 	private JButton b6 = new JButton("OH YES DADDY<3");
 	private JButton b7 = new JButton("Cancer");
@@ -28,7 +37,8 @@ public class SoundboardButtons extends JFrame
 	private JButton b23= new JButton("NOOOOO!");
 	private JButton b24= new JButton("NOOOOO!");
 	private JButton b25= new JButton("NOOOOO!");
-	private GridLayout layout = new GridLayout(5, 5);
+	private JButton b26= new JButton("Stop Button");
+	private GridLayout layout = new GridLayout(5, 5, 1, 1);
 	private Container con = getContentPane();
 	public SoundboardButtons()
 	{
@@ -58,6 +68,7 @@ public class SoundboardButtons extends JFrame
 		con.add(b23);
 		con.add(b24);
 		con.add(b25);
+		con.add(b26);
 		setSize(200, 200);
 		
 	}
@@ -66,6 +77,18 @@ public class SoundboardButtons extends JFrame
 		// TODO Auto-generated method stub
 		SoundboardButtons frame = new SoundboardButtons();
 		frame.setVisible(true);
+	
+		 
+	   
 	}
+	
+	
+public static void butt()
+{ JOptionPane.showMessageDialog(null, "White Space Matters more than Black Space");
+	
+	
+		
+		}
 
 }
+
