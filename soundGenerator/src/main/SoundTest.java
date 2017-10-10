@@ -1,18 +1,49 @@
 package main;
 import java.io.*;
+
 import sun.audio.*;
 import java.nio.file.LinkOption;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-public class SoundTest
-{
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.*;
 
+public class SoundTest extends JFrame
+
+{
+	 
+	private JButton b1 = new JButton("Falcon Punch");
+
+{b1.addActionListener(e->
+
+{
+	try {
+		FP();
+	} catch (Exception e1) {
+		
+		e1.printStackTrace();
+	}
+});
+}
+private GridLayout layout = new GridLayout(1, 1);
+private Container con = getContentPane();
+public SoundTest()
+{
+	con.setLayout(layout);
+	con.add
+	(b1);
+	setSize(200, 200);
+	
+}
 public static void main(String[] args) 
 throws Exception 
 
 {
+	SoundTest frame = new SoundTest();
+	frame.setVisible(true);
 
-	
 
 }
 
@@ -43,10 +74,6 @@ throws Exception
 	  AudioStream audio = new AudioStream(in);
 	  AudioPlayer.player.start(audio);
 }
-
-
-
-
 public static void BRUH()
 throws Exception 
 {
@@ -107,6 +134,105 @@ public static void mr()
 throws Exception 
 {
 	Path path = Paths.get("mr.wav");
+	Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+	String place = realPath.toString();
+	  String wav_file = place;
+	InputStream in = new FileInputStream(wav_file);
+	  AudioStream audio = new AudioStream(in);
+	  AudioPlayer.player.start(audio);
+}
+public static void luvu()
+throws Exception 
+{
+	Path path = Paths.get("luvu.wav");
+	Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+	String place = realPath.toString();
+	  String wav_file = place;
+	InputStream in = new FileInputStream(wav_file);
+	  AudioStream audio = new AudioStream(in);
+	  AudioPlayer.player.start(audio);
+}
+public static void listen()
+throws Exception 
+{
+	Path path = Paths.get("listen.wav");
+	Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+	String place = realPath.toString();
+	  String wav_file = place;
+	InputStream in = new FileInputStream(wav_file);
+	  AudioStream audio = new AudioStream(in);
+	  AudioPlayer.player.start(audio);
+}
+public static void surprise()
+throws Exception 
+{
+	Path path = Paths.get("surprise.wav");
+	Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+	String place = realPath.toString();
+	  String wav_file = place;
+	InputStream in = new FileInputStream(wav_file);
+	  AudioStream audio = new AudioStream(in);
+	  AudioPlayer.player.start(audio);
+}
+public static void triple()
+throws Exception 
+{
+	Path path = Paths.get("triple.wav");
+	Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+	String place = realPath.toString();
+	  String wav_file = place;
+	InputStream in = new FileInputStream(wav_file);
+	  AudioStream audio = new AudioStream(in);
+	  AudioPlayer.player.start(audio);
+}
+public static void troll()
+throws Exception 
+{
+	Path path = Paths.get("troll.wav");
+	Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+	String place = realPath.toString();
+	  String wav_file = place;
+	InputStream in = new FileInputStream(wav_file);
+	  AudioStream audio = new AudioStream(in);
+	  AudioPlayer.player.start(audio);
+}
+public static void combo()
+throws Exception 
+{
+	Path path = Paths.get("combo.wav");
+	Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+	String place = realPath.toString();
+	  String wav_file = place;
+	InputStream in = new FileInputStream(wav_file);
+	  AudioStream audio = new AudioStream(in);
+	  AudioPlayer.player.start(audio);
+}
+public static void gc()
+throws Exception 
+{
+	Path path = Paths.get("gc.wav");
+	Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+	String place = realPath.toString();
+	  String wav_file = place;
+	InputStream in = new FileInputStream(wav_file);
+	  AudioStream audio = new AudioStream(in);
+	  AudioPlayer.player.start(audio);
+}
+public static void doh()
+throws Exception 
+{
+	Path path = Paths.get("doh.wav");
+	Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+	String place = realPath.toString();
+	  String wav_file = place;
+	InputStream in = new FileInputStream(wav_file);
+	  AudioStream audio = new AudioStream(in);
+	  AudioPlayer.player.start(audio);
+}
+public static void sparta()
+throws Exception 
+{
+	Path path = Paths.get("sparta.wav");
 	Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
 	String place = realPath.toString();
 	  String wav_file = place;
