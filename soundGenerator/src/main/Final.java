@@ -14,9 +14,10 @@ public class Final
 {
 
 	public static void main(String[] args) 
+	throws Exception 
 	{
 	
-		
+		troll();
 
 	}
 	public static void no()
@@ -203,6 +204,83 @@ public class Final
 			throws Exception 
 			{
 				Path path = Paths.get("sparta.wav");
+				Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+				String place = realPath.toString();
+				  String wav_file = place;
+				InputStream in = new FileInputStream(wav_file);
+				  AudioStream audio = new AudioStream(in);
+				  AudioPlayer.player.start(audio);
+			}
+			public static void srkn()
+			throws Exception 
+			{
+				Path path = Paths.get("srkn.wav");
+				Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+				String place = realPath.toString();
+				  String wav_file = place;
+				InputStream in = new FileInputStream(wav_file);
+				  AudioStream audio = new AudioStream(in);
+				  AudioPlayer.player.start(audio);
+			}
+			public static void order()
+			throws Exception 
+			{
+				Path path = Paths.get("order.wav");
+				Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+				String place = realPath.toString();
+				  String wav_file = place;
+				InputStream in = new FileInputStream(wav_file);
+				  AudioStream audio = new AudioStream(in);
+				  AudioPlayer.player.start(audio);
+			}
+			public static void BOS()
+			throws Exception 
+			{
+				Path path = Paths.get("BOS.wav");
+				Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+				String place = realPath.toString();
+				  String wav_file = place;
+				InputStream in = new FileInputStream(wav_file);
+				  AudioStream audio = new AudioStream(in);
+				  AudioPlayer.player.start(audio);
+			}
+			public static void finish()
+			throws Exception 
+			{
+				Path path = Paths.get("finish.wav");
+				Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+				String place = realPath.toString();
+				  String wav_file = place;
+				InputStream in = new FileInputStream(wav_file);
+				  AudioStream audio = new AudioStream(in);
+				  AudioPlayer.player.start(audio);
+			}
+			public static void jc()
+			throws Exception 
+			{
+				Path path = Paths.get("jc.wav");
+				Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+				String place = realPath.toString();
+				  String wav_file = place;
+				InputStream in = new FileInputStream(wav_file);
+				  AudioStream audio = new AudioStream(in);
+				  AudioPlayer.player.start(audio);
+			}
+			public static void fitness()
+			throws Exception 
+			{
+				Path path = Paths.get("fitness.wav");
+				Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+				String place = realPath.toString();
+				  String wav_file = place;
+				InputStream in = new FileInputStream(wav_file);
+				  AudioStream audio = new AudioStream(in);
+				  AudioPlayer.player.start(audio);
+			}
+			public static void snoop()
+			throws Exception 
+			{
+				Path path = Paths.get("snoop.wav");
 				Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
 				String place = realPath.toString();
 				  String wav_file = place;
