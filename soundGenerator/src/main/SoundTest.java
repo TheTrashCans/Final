@@ -1,6 +1,5 @@
 package main;
 import java.io.*;
-
 import sun.audio.*;
 import java.nio.file.LinkOption;
 import java.nio.file.Path;
@@ -17,12 +16,10 @@ public class SoundTest extends JFrame
 	private JButton b1 = new JButton("Falcon Punch");
 
 {b1.addActionListener(e->
-
 {
 	try {
 		FP();
 	} catch (Exception e1) {
-		
 		e1.printStackTrace();
 	}
 });
