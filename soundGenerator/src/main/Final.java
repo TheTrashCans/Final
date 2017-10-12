@@ -17,18 +17,22 @@ public class Final
 	throws Exception 
 	{
 	
-		troll();
+		no();
+		FP();
+		
 
 	}
 	public static void no()
 			throws Exception 
 			{
+				
 				Path path = Paths.get("no.wav");
 				Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
 				String place = realPath.toString();
 				  String wav_file = place;
 				InputStream in = new FileInputStream(wav_file);
 				  AudioStream audio = new AudioStream(in);
+				  AudioPlayer.player.stop(audio);
 				  AudioPlayer.player.start(audio);
 			}
 
@@ -43,6 +47,7 @@ public class Final
 				  String wav_file = place;
 				InputStream in = new FileInputStream(wav_file); 
 				  AudioStream audio = new AudioStream(in);
+				  AudioPlayer.player.stop(audio);
 				  AudioPlayer.player.start(audio);
 			}
 			public static void BRUH()
@@ -288,4 +293,16 @@ public class Final
 				  AudioStream audio = new AudioStream(in);
 				  AudioPlayer.player.start(audio);
 			}
+			public static void smash()
+					throws Exception 
+					{
+						Path path = Paths.get("smash.wav");
+						Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+						String place = realPath.toString();
+						  String wav_file = place;
+						InputStream in = new FileInputStream(wav_file);
+						  AudioStream audio = new AudioStream(in);
+						  AudioPlayer.player.start(audio);
+					}
+			
 }
