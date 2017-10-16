@@ -313,16 +313,23 @@ private JButton b1 = new JButton("NOOOOO!");
 		frame.setVisible(true);
 	
 
+		no();
+		FP();
+		
+
+
 	}
 	public static void no()
 			throws Exception 
 			{
+				
 				Path path = Paths.get("no.wav");
 				Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
 				String place = realPath.toString();
 				  String wav_file = place;
 				InputStream in = new FileInputStream(wav_file);
 				  AudioStream audio = new AudioStream(in);
+				  AudioPlayer.player.stop(audio);
 				  AudioPlayer.player.start(audio);
 			}
 
@@ -337,6 +344,7 @@ private JButton b1 = new JButton("NOOOOO!");
 				  String wav_file = place;
 				InputStream in = new FileInputStream(wav_file); 
 				  AudioStream audio = new AudioStream(in);
+				  AudioPlayer.player.stop(audio);
 				  AudioPlayer.player.start(audio);
 			}
 			public static void BRUH()
@@ -583,6 +591,19 @@ private JButton b1 = new JButton("NOOOOO!");
 				  AudioPlayer.player.start(audio);
 			}
 			public static void smash()
+
+					throws Exception 
+					{
+						Path path = Paths.get("smash.wav");
+						Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+						String place = realPath.toString();
+						  String wav_file = place;
+						InputStream in = new FileInputStream(wav_file);
+						  AudioStream audio = new AudioStream(in);
+						  AudioPlayer.player.start(audio);
+					}
+			
+
 			throws Exception 
 			{
 				Path path = Paths.get("smash.wav");
@@ -602,5 +623,6 @@ private JButton b1 = new JButton("NOOOOO!");
 				
 			}
 			
+
 
 }
