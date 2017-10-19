@@ -4,6 +4,9 @@ import sun.audio.*;
 import java.nio.file.LinkOption;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Random;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,19 +15,41 @@ import java.awt.*;
 
 public class Final extends JFrame
 {
-private JButton b1 = new JButton("NOOOOO!");
-{b1.addActionListener(e->
+	//array for the buttons
+JButton[] buttons = new JButton[26];
+	
+static ArrayList<Integer> positions = new ArrayList<Integer>();
+	
+
+//sets layout of buttons
+	private GridLayout layout = new GridLayout(5, 5, 1, 1);
+	
+	
+	//holds all the buttons
+	private Container con = getContentPane();
+	
+	public Final()
+	{
+//names button and values button
+buttons[0] = new JButton("NOOOOO!");
+
+//give the button its action
+{buttons[0].addActionListener(e->
 {
+	//tells the button to use method
 	try {
 		no();
+		
+	//use the exception of the method
 	} catch (Exception e1) {
 		e1.printStackTrace();
 	}
 });
 }
+
 	
-	private JButton b2 = new JButton("FALCON PUNCH");
-	{b2.addActionListener(e->
+	 buttons[1]= new JButton("FALCON PUNCH");
+	{buttons[1].addActionListener(e->
 	{
 		try {
 			FP();
@@ -34,8 +59,8 @@ private JButton b1 = new JButton("NOOOOO!");
 	});
 	}
 		
-	private JButton b3 = new JButton("BRUH");
-	{b3.addActionListener(e->
+	 buttons[2]= new JButton("BRUH");
+	{buttons[2].addActionListener(e->
 	{
 		try {
 			BRUH();
@@ -45,8 +70,8 @@ private JButton b1 = new JButton("NOOOOO!");
 	});
 	}
 	
-	private JButton b4 = new JButton("Saxual Saxsation");
-	{b4.addActionListener(e->
+	 buttons[3]= new JButton("Saxual Saxsation");
+	{buttons[3].addActionListener(e->
 	{
 		try {
 			SS();
@@ -56,8 +81,8 @@ private JButton b1 = new JButton("NOOOOO!");
 	});
 	}
 	
-	private JButton b5 = new JButton("Lemme Smash");
-	{b5.addActionListener(e->
+	 buttons[4]= new JButton("Lemme Smash");
+	{buttons[4].addActionListener(e->
 	{
 		try {
 			smash();
@@ -67,8 +92,8 @@ private JButton b1 = new JButton("NOOOOO!");
 	});
 	}
 	
-	private JButton b6 = new JButton("OH YES DADDY<3");
-	{b6.addActionListener(e->
+	 buttons[5]= new JButton("OH YES DADDY<3");
+	{buttons[5].addActionListener(e->
 	{
 		try {
 			oyd();
@@ -78,8 +103,8 @@ private JButton b1 = new JButton("NOOOOO!");
 	});
 	}
 	
-	private JButton b7 = new JButton("snoopydogg");
-	{b7.addActionListener(e->
+	 buttons[6]= new JButton("snoopydogg");
+	{buttons[6].addActionListener(e->
 	{
 		try {
 			snoop();
@@ -88,8 +113,8 @@ private JButton b1 = new JButton("NOOOOO!");
 		}
 	});
 	}
-	private JButton b8 = new JButton("Suprise MotherF*cker");
-	{b8.addActionListener(e->
+	 buttons[7]= new JButton("Suprise MotherF*cker");
+	{buttons[7].addActionListener(e->
 	{
 		try {
 			surprise();
@@ -99,8 +124,8 @@ private JButton b1 = new JButton("NOOOOO!");
 	});
 	}
 	
-	private JButton b9 = new JButton("TACTICAL NUKE");
-	{b9.addActionListener(e->
+	 buttons[8]= new JButton("TACTICAL NUKE");
+	{buttons[8].addActionListener(e->
 	{
 		try {
 			nuke();
@@ -109,8 +134,8 @@ private JButton b1 = new JButton("NOOOOO!");
 		}
 	});
 	}
-	private JButton b10 = new JButton("MR.MEESEEKS");
-	{b10.addActionListener(e->
+	 buttons[9]= new JButton("MR.MEESEEKS");
+	{buttons[9].addActionListener(e->
 	{
 		try {
 			mr();
@@ -119,8 +144,8 @@ private JButton b1 = new JButton("NOOOOO!");
 		}
 	});
 	}
-	private JButton b11 = new JButton("Sparta");
-	{b11.addActionListener(e->
+	 buttons[10]= new JButton("Sparta");
+	{buttons[10].addActionListener(e->
 	{
 		try {
 			sparta();
@@ -129,8 +154,8 @@ private JButton b1 = new JButton("NOOOOO!");
 		}
 	});
 	}
-	private JButton b12 = new JButton("Combo Breaker");
-	{b12.addActionListener(e->
+	 buttons[11]= new JButton("Combo Breaker");
+	{buttons[11].addActionListener(e->
 	{
 		try {
 			combo();
@@ -139,8 +164,8 @@ private JButton b1 = new JButton("NOOOOO!");
 		}
 	});
 	}
-	private JButton b13 = new JButton("Aerobics");
-	{b13.addActionListener(e->
+	 buttons[12]= new JButton("Aerobics");
+	{buttons[12].addActionListener(e->
 	{
 		try {
 			fitness();
@@ -149,8 +174,8 @@ private JButton b1 = new JButton("NOOOOO!");
 		}
 	});
 	}
-	private JButton b14 = new JButton("DOH");
-	{b14.addActionListener(e->
+	 buttons[13]= new JButton("DOH");
+	{buttons[13].addActionListener(e->
 	{
 		try {
 			doh();
@@ -159,8 +184,8 @@ private JButton b1 = new JButton("NOOOOO!");
 		}
 	});
 	}
-	private JButton b15 = new JButton("MORTAL KOMBAT");
-	{b15.addActionListener(e->
+	 buttons[14]= new JButton("MORTAL KOMBAT");
+	{buttons[14].addActionListener(e->
 	{
 		try {
 			finish();
@@ -169,8 +194,8 @@ private JButton b1 = new JButton("NOOOOO!");
 		}
 	});
 	}
-	private JButton b16 = new JButton("Street Fighter");
-	{b16.addActionListener(e->
+	 buttons[15]= new JButton("Street Fighter");
+	{buttons[15].addActionListener(e->
 	{
 		try {
 			srkn();
@@ -179,8 +204,8 @@ private JButton b1 = new JButton("NOOOOO!");
 		}
 	});
 	}
-	private JButton b17 = new JButton("Execute");
-	{b17.addActionListener(e->
+	 buttons[16]= new JButton("Execute");
+	{buttons[16].addActionListener(e->
 	{
 		try {
 			order();
@@ -189,8 +214,8 @@ private JButton b1 = new JButton("NOOOOO!");
 		}
 	});
 	}
-	private JButton b18 = new JButton("Coke Addict");
-	{b18.addActionListener(e->
+	 buttons[17]= new JButton("whitney");
+	{buttons[17].addActionListener(e->
 	{
 		try {
 			luvu();
@@ -200,8 +225,8 @@ private JButton b1 = new JButton("NOOOOO!");
 	});
 	}
 	
-	private JButton b19 = new JButton("Triple");
-	{b19.addActionListener(e->
+	 buttons[18]= new JButton("Triple");
+	{buttons[18].addActionListener(e->
 	{
 		try {
 			triple();
@@ -211,8 +236,8 @@ private JButton b1 = new JButton("NOOOOO!");
 	});
 	}
 	
-	private JButton b20 = new JButton("Shitendo");
-	{b20.addActionListener(e->
+	 buttons[19]= new JButton("Shitendo");
+	{buttons[19].addActionListener(e->
 	{
 		try {
 			gc();
@@ -222,8 +247,8 @@ private JButton b1 = new JButton("NOOOOO!");
 	});
 	}
 	
-	private JButton b21 = new JButton("BOS");
-	{b21.addActionListener(e->
+	 buttons[20]= new JButton("BOS");
+	{buttons[20].addActionListener(e->
 	{
 		try {
 			BOS();
@@ -232,8 +257,8 @@ private JButton b1 = new JButton("NOOOOO!");
 		}
 	});
 	}
-	private JButton b22= new JButton("ITS OVER 9000");
-	{b22.addActionListener(e->
+	 buttons[21]= new JButton("ITS OVER 9000");
+	{buttons[21].addActionListener(e->
 	{
 		try {
 			nine();
@@ -242,8 +267,8 @@ private JButton b1 = new JButton("NOOOOO!");
 		}
 	});
 	}
-	private JButton b23= new JButton("trololololololololollolololololololololololololololololololololololololololololo");
-	{b23.addActionListener(e->
+	 buttons[22]= new JButton("trololololololololollolololololololololololololololololololololololololololololo");
+	{buttons[22].addActionListener(e->
 	{
 		try {
 			troll();
@@ -252,8 +277,8 @@ private JButton b1 = new JButton("NOOOOO!");
 		}
 	});
 	}
-	private JButton b24= new JButton("Annoying Fairy");
-	{b24.addActionListener(e->
+	 buttons[23]= new JButton("Annoying Fairy");
+	{buttons[23].addActionListener(e->
 	{
 		try {
 			listen();
@@ -262,8 +287,8 @@ private JButton b1 = new JButton("NOOOOO!");
 		}
 	});
 	}
-	private JButton b25= new JButton("AND HE IS.....");
-	{b25.addActionListener(e->
+	 buttons[24]= new JButton("AND HE IS.....");
+	{buttons[24].addActionListener(e->
 	{
 		try {
 			jc();
@@ -272,56 +297,88 @@ private JButton b1 = new JButton("NOOOOO!");
 		}
 	});
 	}
-	
-	private GridLayout layout = new GridLayout(5, 5, 1, 1);
-	private Container con = getContentPane();
-	public Final()
+	 buttons[25]= new JButton("press me :) please i dont wanna be here ");
+	{buttons[25].addActionListener(e->
 	{
-		con.setLayout(layout);
-		con.add(b1);
-		con.add(b2);
-		con.add(b3);
-		con.add(b4);
-		con.add(b5);
-		con.add(b6);
-		con.add(b7);
-		con.add(b8);
-		con.add(b9);
-		con.add(b10);
-		con.add(b11);
-		con.add(b12);
-		con.add(b13);
-		con.add(b14);
-		con.add(b15);
-		con.add(b16);
-		con.add(b17);
-		con.add(b18);
-		con.add(b19);
-		con.add(b20);
-		con.add(b21);
-		con.add(b22);
-		con.add(b23);
-		con.add(b24);
-		con.add(b25);
+		try {
+			
+			//makes it exit the program for the lawls
+			System.exit(0);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+	});
+	}
+	
+	// end of button comments. 
+	
+	
+	//tells you how many buttons you will get and what buttons they are. 
+	for (int i = 0; i < buttons.length; i++) {
+	randomNum();
+	}
+	//sets the layout of the buttons for how many buttons it was given. 
+	con.setLayout(layout);
+	
+	
+	//adds the random amount of buttons.
+	for (int i = 0; i < buttons.length; i++) 
+	{
+		//randomizes the positions of the buttons.
+		con.add(buttons[positions.get(i)-1]);
+		
+	}
+		//size of the buttons.
 		setSize(200, 200);
 		
 	}
+	
+	
 	public static void main(String[] args) 
 	throws Exception 
 	{
+		//makes the buttons visible
 		Final frame = new Final();
 		frame.setVisible(true);
 	
 
 	}
+	
+	
+	
+	
+	//class for random buttons. 
+	public static void randomNum()
+	{
+		Random rand = new Random();
+
+		int  n = rand.nextInt(26) + 1;
+		
+		if(positions.contains(n))
+		{
+			
+			randomNum();
+		}
+		
+		positions.add(n);
+	}
+	
+	
+	
+	
 	public static void no()
 			throws Exception 
 			{
+				//finds path of file
 				Path path = Paths.get("no.wav");
 				Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+				//makes path into a string
 				String place = realPath.toString();
 				  String wav_file = place;
+				  //string can now be read by filefinder
 				InputStream in = new FileInputStream(wav_file);
+				
+				//plays audio
 				  AudioStream audio = new AudioStream(in);
 				  AudioPlayer.player.start(audio);
 			}
@@ -593,14 +650,19 @@ private JButton b1 = new JButton("NOOOOO!");
 				  AudioStream audio = new AudioStream(in);
 				  AudioPlayer.player.start(audio);
 			}
+			
+
+			
+			
+			
 			public static void trollbutton()
 			{
 				
 			}
 			public static void randomsounds()
 			{
-				//update
+				
 			}
-			
+			//end of sounds comments.
 
 }
