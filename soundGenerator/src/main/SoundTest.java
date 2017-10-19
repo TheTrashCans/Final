@@ -34,15 +34,30 @@ public SoundTest()
 	setSize(200, 200);
 	
 }
-public static void main(String[] args) 
+
+
+
+
+
+public static void main(String args[]) 
 throws Exception 
 
 {
+	
+	
 	SoundTest frame = new SoundTest();
 	frame.setVisible(true);
+	
+
+	
 
 
 }
+
+
+
+
+
 
 
 

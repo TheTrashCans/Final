@@ -1,5 +1,6 @@
 package main;
 import java.awt.*;
+import java.util.Random;
 import javax.swing.*;
 import java.awt.event.*;
 public class JFrameWithColor extends JFrame
